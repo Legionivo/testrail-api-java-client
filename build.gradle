@@ -11,10 +11,11 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 
-version '1.0.0'
+version '1.0.2'
 group = 'com.github.Legionivo'
 
 sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
 
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
