@@ -1,6 +1,7 @@
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
+    id 'maven-publish'
 }
 
 repositories {
@@ -11,6 +12,7 @@ repositories {
 }
 
 version '1.0.0'
+group = 'com.github.Legionivo'
 
 sourceCompatibility = JavaVersion.VERSION_11
 
@@ -39,6 +41,7 @@ dependencies {
 
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'maven'
 
 test {
     // Use junit platform for unit tests
