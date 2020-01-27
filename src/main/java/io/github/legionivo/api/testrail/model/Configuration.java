@@ -42,7 +42,7 @@ public class Configuration {
 
     @Data
     @Accessors(chain = true)
-    public class Config {
+    public static class Config {
 
         private int id;
         private String name;
