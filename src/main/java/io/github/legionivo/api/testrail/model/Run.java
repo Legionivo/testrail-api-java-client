@@ -66,6 +66,7 @@ public class Run {
     @JsonView({TestRail.Runs.Add.class, TestRail.Runs.Update.class, TestRail.Plans.Add.class, TestRail.Plans.AddEntry.class})
     private Boolean includeAll;
 
+    @JsonProperty("case_ids")
     @JsonView({TestRail.Runs.Add.class, TestRail.Runs.Update.class, TestRail.Plans.Add.class, TestRail.Plans.AddEntry.class})
     private List<Integer> caseIds;
 
@@ -79,8 +80,10 @@ public class Run {
 
     private Date completedOn;
 
-    private List<String> config;
+    @JsonProperty("config")
+    private String config;
 
+    @JsonProperty("config_ids")
     @JsonView({TestRail.Plans.Add.class, TestRail.Plans.AddEntry.class})
     private List<Integer> configIds;
 

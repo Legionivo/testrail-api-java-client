@@ -24,10 +24,7 @@
 
 package io.github.legionivo.api.testrail.model;
 
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonView;
+import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -68,6 +65,7 @@ public class Result {
 
     private int createdBy;
 
+    @JsonProperty("assignedto_id")
     @JsonView({TestRail.Results.Add.class, TestRail.Results.AddForCase.class, TestRail.Results.AddList.class, TestRail.Results.AddListForCases.class})
     private Integer assignedtoId;
 

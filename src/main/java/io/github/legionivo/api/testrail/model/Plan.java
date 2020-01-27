@@ -114,9 +114,11 @@ public class Plan {
         @Getter(value = AccessLevel.PRIVATE)
         private Boolean includeAll;
 
+        @JsonProperty("case_ids")
         @JsonView({TestRail.Plans.Add.class, TestRail.Plans.AddEntry.class, TestRail.Plans.UpdateEntry.class})
         private List<Integer> caseIds;
 
+        @JsonProperty("config_ids")
         @JsonView({TestRail.Plans.Add.class, TestRail.Plans.AddEntry.class})
         private List<Integer> configIds;
 
