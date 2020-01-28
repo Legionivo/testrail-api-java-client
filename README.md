@@ -37,11 +37,6 @@ testRail.runs().close(run.getId()).execute();
 testRail.projects().update(project.setCompleted(true)).execute();
 ```
 
- Notables
-------------
-
-### Thin Client Library
-Except the initial configration (refer to [example](#example-usage)), this client library does not maintain any state from your TestRail service. You can maintain/cache state on your end if you like.
 
 ### Custom Case And Result Fields
 TestRail supports adding custom case and result fields. The request interfaces in ```TestRail.Cases``` and ```TestRail.Results``` requires a list of these fields in order to allow this library to map them to the correct Java types. Here's an example where we want to to know the separated test steps of a particular test case:
@@ -61,6 +56,6 @@ List<Field.Step> customSteps = testCase.getCustomField("separated_steps");
 Find the map of supported TestRail field types to Java types in the javadoc of ```Field.Type``` enum.
 As mentioned [above](#thin-client-library), since this is a thin library, it does not store the list of fields. You can cache them on your end if you like.
 
-## License
+License
 ----------
 This project is licensed under [MIT license](http://opensource.org/licenses/MIT).
