@@ -53,8 +53,6 @@ List<Field.Step> customSteps = testCase.getCustomField("separated_steps");
 // work with typed customSteps
 ......
 ```
-Find the map of supported TestRail field types to Java types in the javadoc of ```Field.Type``` enum.
-As mentioned [above](#thin-client-library), since this is a thin library, it does not store the list of fields. You can cache them on your end if you like.
 
 License
 ----------
