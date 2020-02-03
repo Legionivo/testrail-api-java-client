@@ -991,9 +991,9 @@ public class TestRail {
          * @return the request
          * @throws java.lang.IllegalArgumentException if any argument is not positive
          */
-        public DeleteEntry deleteEntry(final int planId, final int entryId) {
+        public DeleteEntry deleteEntry(final int planId, final String entryId) {
             checkArgument(planId > 0, "planId should be positive");
-            checkArgument(entryId > 0, "entryId should be positive");
+            checkArgument(entryId != null, "entryId should have value");
             return new DeleteEntry(planId, entryId);
         }
 
@@ -1124,7 +1124,7 @@ public class TestRail {
         public class DeleteEntry extends Request<Void> {
             private static final String REST_PATH = "delete_plan_entry/%s/%s";
 
-            private DeleteEntry(int planId, int entryId) {
+            private DeleteEntry(int planId, String entryId) {
                 super(config, Method.POST, String.format(REST_PATH, planId, entryId), Void.class);
             }
         }
