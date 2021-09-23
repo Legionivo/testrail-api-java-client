@@ -2,8 +2,7 @@
 --------------------------
 # Warning! Achtung! Attention! 
 # Project is out of date and not going to be updated until author will use TestRail again. 
-¯\_(ツ)_/¯
-
+# ¯\\_(ツ)_/¯
 
 A Java client library for [TestRail API](http://docs.gurock.com/testrail-api2/start).
 
