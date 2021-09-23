@@ -2,7 +2,7 @@
 --------------------------
 # Warning! Achtung! Attention! 
 # Project is out of date and not going to be updated until author will use TestRail again. 
-
+# Send your pull-requests if you still want to use this project. 
 
 ![](shrug.png)
 
